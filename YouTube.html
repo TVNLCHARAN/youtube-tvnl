@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="video.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        div,p{
+            display: inline-block;
+            margin: 0px;
+        }
+        input:focus {
+            outline: none;
+        }
+        body{
+            margin-top: 60px;
+            margin-left: 80px;
+            font-family: Arial;
+            background-color: rgb(248,248,248);
+        }
+        .website{
+            vertical-align: top;
+            /* display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* align-items: center; */
+            justify-content: center;
+            column-gap: 20px;
+            row-gap: 20px;
+            transition: 0.2s;
+            min-width: 200px;
+        }
+        /* @media (max-width: 630px){ */
+            /* .website{
+                grid-template-columns: 1fr;
+            } */
+            /* .outer-div{
+                margin-right: 20%;
+                margin-left: 15%;
+                max-width: 400px;
+            }
+            .thumbnail{
+                width: 350px;
+                height: 300px;
+                max-width: 800px;
+            } */
+        /* } */
+        /* @media (min-width: 631px) and (max-width: 900px) { */
+            /* .website{
+                grid-template-columns: 1fr 1fr;
+            } */
+            /* .outer-div{
+                margin-right: 20%;
+                margin-left: 15%;
+                max-width: 400px;
+            }
+            .thumbnail{
+                width: 350px;
+                height: 300px;
+                max-width: 800px;
+            } */
+        /* } */
+        /* @media (min-width: 901px) and (max-width: 1199px){
+            .website{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        @media (min-width: 1200px) {
+            .website{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="first">
+            <img src="icons/hamburger-menu.svg" alt="Menu" id="menu">
+            <a href="YouTube.html"><img src="icons/youtube-logo.svg" alt="YouTube Logo" id="logo"></a>
+        </div>
+        <div class="second">
+            <input class="search-bar" type="text" placeholder="Search">
+            <div id="search-div">
+                <img src="icons/search.svg" alt="search" id="search">
+                <div class="search-tooltip">Search</div>
+            </div>
+            <div id="voice-search-div">
+                <img id="voice-search-icon" src="icons/voice-search-icon.svg" alt="voice-search">
+                <div id="voice-search-tooltip">voice-search</div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="header-icons">
+                <img src="icons/upload.svg" alt="upload" class="icons">
+                <div class="popup">Create</div>
+            </div>
+            <div class="header-icons">
+                <img src="icons/youtube-apps.svg" alt="apps" class="icons">
+                <div class="popup">Apps</div>
+            </div>
+            <div class="header-icons" id="notifications-div">
+                <img  src="icons/notifications.svg" alt="notifications" class="icons">
+                <div id="notifications-count">3</div>
+                <div class="popup">Notifications</div>
+            </div>
+            <div class="header-icons">
+                <img style="width: 30px;border-radius: 50px;height: 30px;" src="images/charan.png" alt="channel" class="icons">
+                <div class="popup">Profile</div>
+            </div>
+        </div>
+    </header>
+    <!-- SIDE BAR -->
+    <nav id="sidebar">
+        <div>
+            <img src="icons/home.svg" alt="home" class="sidebar-icons">
+            <p style="font-size: 12px;margin: 0px;">Home</p>
+        </div>
+        <div>
+            <img src="icons/explore.svg" alt="explore" class="sidebar-icons">
+            <p style="font-size: 12px;margin: 0px;">Explore</p>
+        </div>
+        <div>
+            <img src="icons/subscriptions.svg" alt="suibscriptions" class="sidebar-icons">
+            <p style="font-size: 12px;margin: 0px;">Subscriptions</p>
+        </div>
+        <div>
+            <img src="icons/originals.svg" alt="originals" class="sidebar-icons">
+            <p style="font-size: 12px;margin: 0px;">Originals</p>
+        </div>
+        <div>
+            <img src="icons/youtube-music.svg" alt="music" class="sidebar-icons">
+            <p style="font-size: 10px;">YouTube Music</p>
+        </div>
+        <div>
+            <img src="icons/library.svg" alt="library" class="sidebar-icons">
+            <p style="font-size: 12px;margin: 0px;">Library</p>
+        </div>
+    </nav>
+    <main class="website container-fluid justify-content-between">
+        
+        <div class="row">
+
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a target="_blank" href="https://youtu.be/HGTJBPNC-Gw?si=cjFK2PUHpTjpEdWK">
+                    <img src="thumbnails/html-bro.jpg" alt="selfie" class="imgs"></a>
+                    <div class="timeline">
+                        04:00:00
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/bro-code.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">HTML & Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis amet voluptas nulla, doloribus deserunt aperiam voluptates perspiciatis unde dolorum atque accusantium consequatur rem ipsum a quia, autem, eum maxime minus?CSS Full Course for free 🌎 (2023)</p>
+                        <p class="channel">Bro Code</p>
+                        <p class="views">1.2M Views. 1 year ago.</p>
+                    </div>
+                </div>
+            </div>
+    
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a target="_blank" href="https://youtu.be/G3e-cpL7ofc?si=aXjSUeVbkMrnyLEk">
+                    <img src="thumbnails/html-supersimpledev.jpg" alt="selfie" class="imgs"></a>
+                    <div class="timeline">
+                        06:31:27
+                    </div>
+                </div>
+                
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/supersimpledev.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/supersimpledev.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">SuperSimpleDev</p>
+                                <p class="subscribers">367k Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">HTML and CSS complete course from beginner to pro.</p>
+                        <p class="channel">SuperSimpleDev</p>
+                        <p class="views">8.2M views. 1 year ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a href="https://youtu.be/-qfEOE4vtxE?si=83RNHNh-gGSgS4hR" target="_blank">
+                        <img src="thumbnails/bootstrap.jpg" alt="bootstrap" class="imgs">
+                        <div class="timeline">
+                            02:47:19
+                        </div>
+                    </a>
+                    
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/freecodecamp.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/freecodecamp.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">freeCodeCamp.org</p>
+                                <p class="subscribers">7.9M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Bootsrap Course in 3 Hours Full Course For beginners.</p>
+                        <p class="channel">freeCodeCamp.org</p>
+                        <p class="views">1.1M views. 2 years ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a href="https://youtu.be/lfmg-EJ8gm4?si=qDOU9G4B3VB16g66" target="_blank">
+                        <img src="thumbnails/js-bro.jpg" alt="selfie" class="imgs">
+                        <div class="timeline">
+                            12:00:00
+                        </div>
+                    </a>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/bro-code.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">JavaScript Full Course for free 🌐 (2024)</p>
+                        <p class="channel">Bro Code</p>
+                        <p class="views">2225k views. 1 month ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=Ez8F0nW6S-w&t=1s&pp=ygUZY29tcGxldGUgZ2l0IGFwbmEgY29sbGVnZQ%3D%3D">
+                    <img src="thumbnails/git-apna-college.jpg" alt="Git and Git hub" class="imgs">
+                    <div class="timeline">
+                        01:52:52
+                    </div>
+                    </a>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/apna-college.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/apna-college.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">Apna Collefe</p>
+                                <p class="subscribers">4.79M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Complete Git and Git Hub Tutorials for Beginners</p>
+                        <p class="channel">Apna College</p>
+                        <p class="views">1.4M views. 5 months ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=IFZD-VKwEk8&t=28050s&pp=ygVDSFRNTCBDU1MgVHV0b3JpYWwgRm9yIGJlZ2lubmVycyAoVGhlIG9ubHkgQ291cnNlIHlvdSdsbCBldmVyIG5lZWQgKQ%3D%3D">
+                    <img src="thumbnails/html-my-lesson.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        08:30:37
+                    </div>
+                    </a>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="icons/my-lesson.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="icons/my-lesson.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">My Lesson</p>
+                                <p class="subscribers">365k Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">HTML CSS Tutorial For beginners (The only Course you'll ever need )</p>
+                        <p class="channel">My Lesson</p>
+                        <p class="views">70k views. 2 years ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <a href="https://www.youtube.com/watch?v=SBmSRK3feww&t=4s&pp=ygUwamF2YXNjcmlwdCB0dXRvcmlhbCBmb3IgYmVnaW5uZXJzIHN1cGVyc2ltcGxlZGV2">
+                        <img src="thumbnails/js-ssd.jpg" alt="selfie" class="imgs">
+                    </a>
+                    <div class="timeline">
+                        11:57:22
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="icons/supersimpledev.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/supersimpledev.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">SuperSimpleDev</p>
+                                <p class="subscribers">367k Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">JavaScript Full tutorial from Beginner to Pro - Part 1</p>
+                        <p class="channel">SuperSimpleDev</p>
+                        <p class="views">3.3M views. 8 months ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/thumbnail3.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile2.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Tvnl Charan with Pranay @ Sankranthi Celebrations.</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 2 years ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/thumbnail2.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile2.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Tvnl Charan with Pranay @ Sankranthi Celebrations.</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 6 months ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/thumbnail3.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile2.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Tvnl Charan with Pranay @ Sankranthi Celebrations.</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 2 years ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/thumbnail1.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile1.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Drone View of New York City at Night</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 2 months ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/thumbnail2.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile2.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Tvnl Charan with Pranay @ Sankranthi Celebrations.</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 6 months ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/thumbnail2.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile2.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Tvnl Charan with Pranay @ Sankranthi Celebrations.</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 6 months ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/profile2.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile2.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Tvnl Charan with Pranay @ Sankranthi Celebrations.</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 2 years ago.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="outer-div col-lg-4 col-xl-3 col-md-6 col-sm-6 col-12">
+                <div class="thumbnail">
+                    <img src="images/family.jpg" alt="selfie" class="imgs">
+                    <div class="timeline">
+                        time
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="profile">
+                        <img src="images/profile1.jpg" alt="charan" class="profile1">
+                        <div class="profile-preview">
+                            <div class="profile-div">
+                                <img src="images/bro-code.jpg" alt="profile" class="channel-profile">
+                            </div>
+                            <div class="channel-div">
+                                <p class="channel-name">BRO CODE</p>
+                                <p class="subscribers">1.2M Subscribers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <p class="title">Drone View of New York City at Night</p>
+                        <p class="channel">Pranay</p>
+                        <p class="views">108k views. 2 months ago.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+</body>
+</html>
